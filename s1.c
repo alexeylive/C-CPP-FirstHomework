@@ -17,12 +17,11 @@ void destroyTree(BinaryTreeNode* root);
 
 int main(int argc, char *argv[])
 {
-  BinaryTreeNode* root= NULL;
-  char* str2;
+BinaryTreeNode* root= NULL;
+char* str2;
 str2=malloc(sizeof(char)*1024);
 FILE* doc = fopen(argv[2],"r");
- if((!doc)||(argc>3)
-    ||((strcmp(argv[1],"ascending"))&&(strcmp(argv[1],"descending"))))
+        if((!doc)||(argc>3)||((strcmp(argv[1],"ascending"))&&(strcmp(argv[1],"descending"))))
  {
  printf ("Error\n");
  return 1;
