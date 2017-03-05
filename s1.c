@@ -21,7 +21,7 @@ BinaryTreeNode* root= NULL;
 char* str2;
 str2=malloc(sizeof(char)*1024);
 FILE* doc = fopen(argv[2],"r");
-        if((!doc)||(argc>3)||((strcmp(argv[1],"ascending"))&&(strcmp(argv[1],"descending"))))
+        if((!str2)||(!doc)||(argc>3)||((strcmp(argv[1],"ascending"))&&(strcmp(argv[1],"descending"))))
  {
  printf ("Error\n");
  return 1;
@@ -46,6 +46,11 @@ if (!root)
  {
  root = (BinaryTreeNode*)malloc(sizeof(BinaryTreeNode));
  root->data=(char*)malloc(sizeof(char)*(strlen(value)+1));
+ if((!root)||(!(root->data)))
+ {
+ printf("Error in malloc(addNode)");
+ return 0;
+ }       
  strcpy(root->data,value);
  root->left = NULL;
  root->right = NULL;
