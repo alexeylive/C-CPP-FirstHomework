@@ -32,7 +32,7 @@ fgets(str2,1024,doc);
 root = addNode(root,str2);
 }
 free(str2);
-if(strcmp(argv[1],"ascending"))
+if(!strcmp(argv[1],"ascending"))
 printSortAscending(root);
 else printSortDescending(root);
 destroyTree(root);
