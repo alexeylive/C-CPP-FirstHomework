@@ -55,6 +55,7 @@ if (strcmp(value,root->data)>0)
  root->right = addNode(root->right, value);
 if (strcmp(value,root->data)<0)
  root->left  = addNode(root->left, value);
+return root;
 }
 
 void printSortAscending(BinaryTreeNode* root)
