@@ -48,8 +48,8 @@ if (!root)
  root->data=(char*)malloc(sizeof(char)*(strlen(value)+1));
  if((!root)||(!(root->data)))
  {
- printf("Error in malloc(addNode)");
- return 0;
+ printf("Error in malloc(addNode)\n");
+ return 1;
  }       
  strcpy(root->data,value);
  root->left = NULL;
