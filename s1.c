@@ -49,7 +49,7 @@ if (!root)
  if((!root)||(!(root->data)))
  {
  printf("Error in malloc(addNode)\n");
- return 1;
+ return;
  }       
  strcpy(root->data,value);
  root->left = NULL;
