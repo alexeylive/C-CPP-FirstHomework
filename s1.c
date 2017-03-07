@@ -45,11 +45,16 @@ BinaryTreeNode* addNode(BinaryTreeNode* root, char *value)
 if (!root)
  {
  root = (BinaryTreeNode*)malloc(sizeof(BinaryTreeNode));
- root->data=(char*)malloc(sizeof(char)*(strlen(value)+1));
- if((!root)||(!(root->data)))
+ if(!root)
  {
- printf("Error in malloc(addNode)\n");
- return;
+ printf("Error in malloc(addNode). Root \n");
+ return NULL;
+ } 
+ root->data=(char*)malloc(sizeof(char)*(strlen(value)+1));
+ if(!(root->data))
+ {
+ printf("Error in malloc(addNode). Root->data\n");
+ return NULL;
  }       
  strcpy(root->data,value);
  root->left = NULL;
