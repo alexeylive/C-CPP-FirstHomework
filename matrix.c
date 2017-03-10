@@ -87,8 +87,11 @@ for (int i=0;i<col_1;i++) 	//Перемножение матриц (m_1,m_2) и 
   }
 
 print_matrix(m_1,col_1,row_1);		//Печать всех матриц
+free(m_1);
 print_matrix(m_2,col_2,row_2);
+free(m_2);
 print_matrix(m_res,col_1,row_2);
+free(m_res);
 return 0;
 }
 
