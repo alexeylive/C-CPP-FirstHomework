@@ -24,7 +24,7 @@ fscanf(matrix_2,"%i",&col_2);
 fscanf(matrix_2,"%i",&row_2);
 
 if(row_1!=col_2){
-  printf("Error in matrix. They are not consisent. \n");  //Проверяется, возоможность умножения матриц
+  printf("Error in matrix. They are not consisent. \n");  //Проверяется возоможность умножения матриц
   return EXIT_FAILURE;
  }
 
