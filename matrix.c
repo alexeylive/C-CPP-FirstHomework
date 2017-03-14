@@ -74,10 +74,12 @@ for(int i=0;i<col_1;i++){		//Выделение памяти под столбц
 for (int i=0; i<col_1;i++)	//Считывание значений с файла и заполнение m_1
   for(int j=0;j<row_1;j++)
     fscanf(matrix_1,"%i",&m_1[i][j]);
+fclose(matrix_1);
 
 for (int i=0; i<col_2;i++)	//Считывание значений с файла и заполнение m_2
   for(int j=0;j<row_2;j++)
     fscanf(matrix_2,"%i",&m_2[i][j]);
+fclose(matrix_2);
 
 for (int i=0;i<col_1;i++) 	//Перемножение матриц (m_1,m_2) и последующая запись результата в матрицу m_res
   for (int j=0; j<row_2; j++){
