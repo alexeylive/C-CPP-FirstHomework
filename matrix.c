@@ -5,7 +5,7 @@ void print_matrix(int** A, int col, int row); 		//Функция для печа
 
 int main(int argc, char *argv[]) {
 if (argc!=3){
-  printf("A data-entry error. \n");		//Проверка количества введеных данных через консоль
+  printf("A data-entry error. \n");		//Проверка количества данных, введеных через консоль
   return EXIT_FAILURE;
  }
 
